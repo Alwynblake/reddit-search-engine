@@ -11,7 +11,7 @@ export default class App extends React.Component {
   async componentDidMount() {
     await this.LoadRedditList();
   }
-  LoadRedditList  = async () => {
+  LoadRedditList = async () => {
     const REDDIT_API = 'https://www.reddit.com/r/dogs.json?limit=20';
 
     return superagent.get(REDDIT_API)
