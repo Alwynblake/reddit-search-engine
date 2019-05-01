@@ -5,17 +5,20 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.state.reddit = [];
+    this.state.topics = [];
   }
 
   async componentDidMount() {
     await this.LoadRedditList();
   }
   LoadRedditList = async () => {
-    const REDDIT_API = 'https://www.reddit.com/r/dogs.json?limit=20';
+    const REDDIT_API = 'https://www.reddit.com/r/dogs.json?limit=22';
 
     return superagent.get(REDDIT_API)
         .then(response => {
+          this.setState({
+            topics: response.body.data
+          });
           console.log(response);
         })
           .catch(console.error);
@@ -24,7 +27,13 @@ export default class App extends React.Component {
   render() {
     return(
         <main>
-          welcome :)
+          <ul>
+          {
+            this.state.topics.map((currentTopics, index) =>
+                <li>{currentTopics.name}</li>
+            )
+          }
+          </ul>
         </main>
     );
   }
