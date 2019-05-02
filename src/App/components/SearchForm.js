@@ -11,8 +11,10 @@ export default class SearchForm extends React.Component {
     return(
         <form>
           <input name = "textInput" type="text"/>
-          <button type="submit"> Update List</button>button>
+          <input name = "numberInput" type ="number"/>
+          <button type="submit"> Update List (searchForm.js)</button>
         </form>
     );
-  }
 }
+}
+
