@@ -7,7 +7,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.state.topics = {};
+    this.state.topics = [];
     this.state.topics.children = [];
   }
 
@@ -33,17 +33,14 @@ export default class App extends React.Component {
 
     return(
         <main>
-          <div>
 
           {
-            this.state.topics.children.map((currentTopics) =>
-
-                <p> {currentTopics.data.title} {currentTopics.data.url} </p>
-                // <p> {currentTopics.data.url} </p>
-
+            this.state.topics.children.map((currentTopics, index) =>
+            <div>
+                <p> {currentTopics.data.title} </p>
+                <p> {currentTopics.data.url} </p>
+            </div>
             )
-          }
-          </div>
           }
             <SearchForm/>
             {/*<SearchResultList/>*/}

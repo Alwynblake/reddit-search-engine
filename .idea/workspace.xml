@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da1d005b-2eab-43fb-823d-327e11bcf0ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/components/SearchResultList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/SearchForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/components/SearchForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/SearchResultList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,11 +33,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+            <state relative-caret-position="159">
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-                <marker date="1556769912536" expanded="true" signature="832:1063" ph="..." />
+                <marker date="1556776813056" expanded="true" signature="816:1061" ph="..." />
               </folding>
             </state>
           </provider>
@@ -230,12 +223,12 @@
       <workItem from="1556401405465" duration="10125000" />
       <workItem from="1556570516703" duration="2936000" />
       <workItem from="1556650802335" duration="243000" />
-      <workItem from="1556672525401" duration="27856000" />
+      <workItem from="1556672525401" duration="30968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43259000" />
+    <option name="totallyTimeSpent" value="46371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -356,11 +349,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="41" column="52" lean-forward="true" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
+        <state relative-caret-position="159">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-            <marker date="1556769912536" expanded="true" signature="832:1063" ph="..." />
+            <marker date="1556776813056" expanded="true" signature="816:1061" ph="..." />
           </folding>
         </state>
       </provider>
