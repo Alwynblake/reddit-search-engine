@@ -1,20 +1,27 @@
 import React from 'react';
 
-export default class SearchForm extends React.Component {
-  constructor(props) {
-    super(props);
+const SearchForm = ({ handleTopic, handleLimit, handleSubmit, errorExists }) => (
+    <form onSubmit={handleSubmit}>
+      <input
+          className={ errorExists ? 'error' : 'normal'}
+          name='textInput'
+          placeholder='reddit topic'
+          type='text'
+          onChange={handleTopic}
+      />
 
-    this.state = {};
-  }
+      <input
+          className={ errorExists ? 'error' : 'normal'}
+          name='numberInput'
+          placeholder='search limit'
+          type='number'
+          onChange={handleLimit}
+          min='1'
+          max='99'/>
 
-  render() {
-    return(
-        <form>
-          <input name = "textInput" type="text"/>
-          <input name = "numberInput" type ="number"/>
-          <button type="submit"> Update List (searchForm.js)</button>
-        </form>
-    );
-}
-}
+      <button type='submit'>Search</button>
+    </form>
+);
+
+export default SearchForm;
 
