@@ -13,7 +13,7 @@
 2. contains a number input for the user to limit the number of results to return
 3. the number must be more than 0 and less than 100
 4. onSubmit the form should make a request to reddit
-5. it should make a get request to https://www.reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}
+5. it should make a get request to https://www.reddit.com/r/${topic}.json?limit=${limit}
 6. on success it should pass the results to the application state
 7. on failure it should add a class to the form called error and turn the form's inputs borders red
 * SearchResultList Component:
