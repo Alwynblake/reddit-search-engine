@@ -31,3 +31,26 @@
     transform: rotate(360deg);
   }
 }
+
+input {
+  width: 20em;
+  height: 5em;
+  border-radius: 10%;
+  margin-right: 3em;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.normal {
+  border: 2px solid black;
+}
+
+h2 {
+  display: none;
+}
+
+.show {
+  display: block;
+}

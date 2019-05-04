@@ -1,49 +1,52 @@
 import React from 'react';
+import '../App.css';
 import superagent from 'superagent';
 import SearchForm from '../App/components/SearchForm';
-// import SearchResultList from '../App/components/SearchResultList';
+import SearchResultList from '../App/components/SearchResultList';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.state.topics = [];
-    this.state.topics.children = [];
+    this.state = {
+      topics: [],
+      topic: '',
+      limit: '',
+      errorExists: false,
+    };
   }
 
-  async componentDidMount() {
-    await this.LoadRedditList();
-  }
-
-  LoadRedditList = async () => {
-    const REDDIT_API = 'https://www.reddit.com/r/cats.json?limit=22';
+  handleSubmit = async (event) => {
+    const { topic, limit } = this.state;
+    event.preventDefault();
+    const REDDIT_API = `https://www.reddit.com/r/${topic}.json?limit=${limit}`;
 
     return superagent.get(REDDIT_API)
         .then(response => {
-          this.setState({
-            topics: response.body.data
-          });
-          console.log(response);
-
+          this.setState({ topics: response.body.data.children, errorExists: false });
         })
-          .catch(console.error);
+          .catch(error => {
+            this.setState({ topics: [], errorExists: true });
+          });
   };
+
+  handleTopic = (event) => this.setState({ topic: event.target.value });
+
+  handleLimit = (event) => this.setState({ limit: event.target.value });
 
   render() {
 
     return(
         <main>
+            <SearchForm
+                handleTopic={this.handleTopic} // passing props to the SearchForm Component
+                handleLimit={this.handleLimit}
+                handleSubmit={this.handleSubmit}
+                errorExists={this.state.errorExists}
+            />
 
-          {
-            this.state.topics.children.map((currentTopics, index) =>
-            <div>
-                <p> {currentTopics.data.title} </p>
-                <p> {currentTopics.data.url} </p>
-            </div>
-            )
-          }
-            <SearchForm/>
-            {/*<SearchResultList/>*/}
+            <SearchResultList
+                topics={this.state.topics} // passing props to the SearchResultList Component
+            />
         </main>
     );
   }
